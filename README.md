@@ -7,15 +7,18 @@ Insurance Analysis
 <!-- badges: end -->
 Se obtuvieron datos de las reclamaciones de una aseguradora en Monterrey. De acuerdo a los datos obtenidos es posible combinar los riesgos del portafolio de la aseguradora. Este reporte se crea como un soporte para el Comité de Riesgo para conocer la estructura de los riesgos así como la influencia de las reclamaciones con las variables que se conocen.
 
+Esta es la base de datos con la que trabajaremos
+
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+insurance_data<-read.csv(paste0(getwd(), "/insurance.csv"))
+head(insurance_data)
+#>   Kilometres Zone Bonus Make Insured Claims Payment
+#> 1          1    1     1    1  455.13    108  392491
+#> 2          1    1     1    2   69.17     19   46221
+#> 3          1    1     1    3   72.88     13   15694
+#> 4          1    1     1    4 1292.39    124  422201
+#> 5          1    1     1    5  191.01     40  119373
+#> 6          1    1     1    6  477.66     57  170913
 ```
 
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
