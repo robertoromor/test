@@ -23,7 +23,7 @@ como la influencia de las reclamaciones con las variables que se conocen.
 
 Esta es la base de datos con la que trabajaremos
 
-```{r cars}
+```{r echo=FALSE}
 insurance_data<-read.csv(paste0(getwd(), "/insurance.csv"))
 head(insurance_data)
 ```
