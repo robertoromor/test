@@ -9,13 +9,13 @@ Se obtuvieron datos de las reclamaciones de una aseguradora en Monterrey. De acu
 
 Esta es la base de datos con la que trabajaremos
 
-    #>   Kilometres Zone Bonus Make Insured Claims Payment
-    #> 1          1    1     1    1  455.13    108  392491
-    #> 2          1    1     1    2   69.17     19   46221
-    #> 3          1    1     1    3   72.88     13   15694
-    #> 4          1    1     1    4 1292.39    124  422201
-    #> 5          1    1     1    5  191.01     40  119373
-    #> 6          1    1     1    6  477.66     57  170913
+    #>   kilometros municipio bono modelo asegurados reclamaciones  pagos
+    #> 1          1         1    1      1     455.13           108 392491
+    #> 2          1         1    1      2      69.17            19  46221
+    #> 3          1         1    1      3      72.88            13  15694
+    #> 4          1         1    1      4    1292.39           124 422201
+    #> 5          1         1    1      5     191.01            40 119373
+    #> 6          1         1    1      6     477.66            57 170913
 
 1.  kilometros. variable para describir la categoría que representa el número de kilómetros recorridos por asegurado.
 
@@ -34,6 +34,33 @@ Hay 5 categorías 1-5 con los siguientes kilometros: 1: &lt; 1,000 kilómetros 2
 4.  Reclamaciones. Número de reclamaciones realizadas por el lote o asegurado.
 
 5.  Pagos. Valor en dólares del pago realizado para cubrir reclamaciones
+
+<!-- badges: start -->
+<!-- badges: end -->
+1. Realizar una Histograma de cada una de las variables
+-------------------------------------------------------
+
+1.  Kilometros
+
+<!-- -->
+
+    #> Loading required package: ggplot2
+    #> 
+    #> Attaching package: 'plotly'
+    #> The following object is masked from 'package:ggplot2':
+    #> 
+    #>     last_plot
+    #> The following object is masked from 'package:stats':
+    #> 
+    #>     filter
+    #> The following object is masked from 'package:graphics':
+    #> 
+    #>     layout
+    #> Warning: `arrange_()` is deprecated as of dplyr 0.7.0.
+    #> Please use `arrange()` instead.
+    #> See vignette('programming') for more help
+    #> This warning is displayed once every 8 hours.
+    #> Call `lifecycle::last_warnings()` to see where this warning was generated.
 
 ![](README_files/figure-markdown_github/pressure-1.png)
 

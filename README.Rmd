@@ -25,10 +25,11 @@ Esta es la base de datos con la que trabajaremos
 
 ```{r echo=FALSE}
 insurance_data<-read.csv(paste0(getwd(), "/insurance.csv"))
+colnames(insurance_data)<-c("kilometros", "municipio", "bono","modelo", "asegurados", "reclamaciones", "pagos")
 head(insurance_data)
 ```
 
-1. kilometros. variable para describir la categoría que representa el número de kilómetros
+a) kilometros. variable para describir la categoría que representa el número de kilómetros
 recorridos por asegurado.
 
 Hay 5 categorías 1-5 con los siguientes kilometros:
@@ -38,7 +39,7 @@ Hay 5 categorías 1-5 con los siguientes kilometros:
 4: 20,000-25,000 kilómetros
 5: 25,000 kilómetros
 
-2. zona. variable para definir el municipio al que pertenece dicho asegurado.
+b) zona. variable para definir el municipio al que pertenece dicho asegurado.
 1: Monterrey
 2: San Pedro
 3: San Nicolás
@@ -48,22 +49,31 @@ Hay 5 categorías 1-5 con los siguientes kilometros:
 6: Garcia
 7: Otros
 
-3. Bonus: Número de años desde que dicho asegurado presentó una reclamación más un
+c) Bonus: Número de años desde que dicho asegurado presentó una reclamación más un
 año adicional.
 
-4. modelo. Modelo del carro asegurado del 1-8 representamos 8 distintos modelos y en el 9
+d) modelo. Modelo del carro asegurado del 1-8 representamos 8 distintos modelos y en el 9
 representa todos los demás.
 
-5. asegurados. Número de asegurados por cada año de póliza, es decir, si tienes una flotilla
+e) asegurados. Número de asegurados por cada año de póliza, es decir, si tienes una flotilla
 de 100 carros y llevan asegurados 3 años exactos el número que representara a estos
 asegurados sera 300
 
-6. Reclamaciones. Número de reclamaciones realizadas por el lote o asegurado.
+f) Reclamaciones. Número de reclamaciones realizadas por el lote o asegurado.
 
-7. Pagos. Valor en dólares del pago realizado para cubrir reclamaciones
+g) Pagos. Valor en dólares del pago realizado para cubrir reclamaciones
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+## 1. Realizar una Histograma de cada una de las variables
+
+a) Kilometros
 
 ```{r pressure, echo = FALSE}
-plot(pressure)
+library(plotly)
+plot_ly(x=~insurance_data$kilometros, type="histogram", histnorm="probability") %>%
+  layout(title="Histograma de Kilometros", xaxis=list(title="Kilometros"), yaxis=list(title="observaciones"))
 ```
 
 In that case, don't forget to commit and push the resulting figure files, so they display on GitHub.
